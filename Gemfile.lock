@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
+    awesome_print (1.6.1)
     cookiejar (0.3.2)
     dotenv (1.0.2)
     em-eventsource (0.2.0)
@@ -22,6 +23,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print (~> 1.6.1)
   dotenv (~> 1.0.2)
   em-eventsource (~> 0.2.0)
+  em-http-request (~> 1.1.2)
   eventmachine (~> 1.0.4)
