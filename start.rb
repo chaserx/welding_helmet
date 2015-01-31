@@ -8,13 +8,12 @@ Dotenv.load
 
 base_url = 'https://api.spark.io'
 device_event_path = "/v1/devices/#{ENV['DEVICE_ID']}/events/#{ENV['EVENT_NAME']}"
-
-puts "listening at: #{base_url+device_event_path}"
+full_path = URI.join(base_url, device_event_path)
+puts "listening at: #{full_path}"
 
 EM.run do
-  # GET /v1/devices/:device_id/events/[:event_name]
-  url = URI.join(base_url, device_event_path)
-  puts url
+  # GET /v1/devices/:device_id/events/:event_name
+  url = full_path
   query = {}
   headers = {'Authorization' => "Bearer #{ENV['ACCESS_TOKEN']}"}
   source = EventMachine::EventSource.new(url, query, headers)
