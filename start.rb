@@ -1,8 +1,5 @@
 require 'bundler/setup'
 Bundler.require
-require 'eventmachine'
-require 'em-eventsource'
-require 'dotenv'
 
 Dotenv.load
 
