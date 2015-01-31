@@ -1,2 +1,4 @@
 # welding_helmet
-A Ruby client to Spark.io event streams
+
+A Ruby client to view Spark.io event streams
+
