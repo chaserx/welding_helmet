@@ -1,0 +1,2 @@
+- want to post to a slack channel
+- want to look in huginn
