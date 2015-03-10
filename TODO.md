@@ -1,2 +1,3 @@
 - want to post to a slack channel
 - want to look in huginn
+- how might this be re-done as a gem
