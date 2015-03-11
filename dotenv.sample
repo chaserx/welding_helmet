@@ -3,3 +3,7 @@ DEVICE_ID=xyz321
 EVENT_NAME=button_status
 PUSHOVER_TOKEN=abababa
 PUSHOVER_USER_KEY=cacacaca
+SLACK_TOKEN=deddeded
+SLACK_CHANNEL_ID=general
+SLACK_USERNAME=spark
+SLACK_ICON_URL=ghost
