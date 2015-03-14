@@ -1,15 +1,8 @@
 # want to post to a Slack channel
 
-#!/bin/sh
-curl -X POST https://slack.com/api/chat.postMessage \
-     --data-urlencode "text=$@" \
-     -d token=$SLACK_TOKEN \
-     -d channel=$SLACK_CHANNEL_ID \
-     -d username=$SLACK_USERNAME \
-     -d icon_url=$SLACK_ICON_URL \
-     -d pretty=1
-
 require 'bundler/setup'
+require 'json'
+
 Bundler.require
 
 Dotenv.load
@@ -31,11 +24,11 @@ EM.run do
   end
 
   source.on ENV['EVENT_NAME'] do |message|
-    slack_url = 'https://slack.com/api/chat.postMessage'
+    slack_url = ENV['SLACK_WEBHOOL_URL']
     body = { token: ENV['SLACK_TOKEN'], channel: ENV['SLACK_CHANNEL_ID'],
-             username: ENV['SLACK_USERNAME'], icon_url: ENV['SLACK_ICON_URL'],
-             pretty: 1 }
-    http = EventMachine::HttpRequest.new(slack_url).post body: body
+             username: ENV['SLACK_USERNAME'], icon_emoji: ENV['SLACK_ICON_EMOJI'],
+             text: 'i am internet button' }
+    http = EventMachine::HttpRequest.new(slack_url).post body: body.to_json
 
     http.errback { p 'Uh oh'; EM.stop }
     http.callback {
