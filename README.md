@@ -16,9 +16,20 @@ The output of the above would be something like below:
 
 `{"name":"button_status","data":"closed","ttl":"60","published_at":"2015-01-29T02:42:48.154Z","coreid":"54ababababa45"}`
 
-Similarly, you can send the same output to your phone via Pushover.
+Other outputs:
+
+- Pushover
+
+Add PUSHOVER_TOKEN and PUSHOVER_USER_KEY to your `.env` file and:
 
 `ruby pushover.rb`
+
+- Slack
+
+Add the following parameters with their corresponding values to your `.env` file:
+SLACK_WEBHOOL_URL, SLACK_CHANNEL_ID, SLACK_USERNAME, SLACK_ICON_EMOJI
+
+`ruby slack.rb`
 
 ## Contribution
 
