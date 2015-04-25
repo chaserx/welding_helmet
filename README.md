@@ -37,4 +37,5 @@ Pull requests welcome! Please see the [contribution guide](CONTRIBUTING.md).
 
 ## Attribution
 
+MP3 from [millidavids](https://github.com/millidavids/hooker-button-extension)
 Welder image courtesy of [Luis Prado via the Noun Project](http://thenounproject.com/term/welder/24911/)
